@@ -1729,19 +1729,15 @@
 
   <div class="music-bar">
     <audio controls loop autoplay>
-      <source src="flores-amarillas.mp3" type="audio/mpeg">
+      <source
+        src="https://github.com/Baque2005/Organizador/raw/refs/heads/master/Floricienta%20-%20Flores%20Amarillas%20(Official%20Video).mp3"
+        type="audio/mpeg">
       Tu navegador no soporta audio HTML5.
     </audio>
   </div>
 
   <script>
     document.body.classList.remove('not-loaded');
-    const music = document.querySelector('audio');
-    const startMusic = function () {
-      music.play().catch(function () { });
-    };
-    startMusic();
-    document.addEventListener('pointerdown', startMusic, { once: true });
     const visibleMessage = document.querySelector('.special-text');
     document.body.appendChild(visibleMessage);
     Object.assign(visibleMessage.style, {
