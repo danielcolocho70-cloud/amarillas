@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ramo de Tulipanes Amarillos</title>
+  <title>Ramito</title>
   <style>
     *,
     *::after,
@@ -1389,7 +1389,7 @@
 <body class="not-loaded">
   <div class="night"></div>
 
-  <div class="special-text">aun que no pueda ir a darte flores en persona quiero que sepas que no te quedaras sin
+  <div class="special-text">aunque no pueda ir a darte flores en persona quiero que sepas que no te quedaras sin
     ellas❤️</div>
 
   <div class="yellow-particles">
@@ -1729,15 +1729,19 @@
 
   <div class="music-bar">
     <audio controls loop autoplay>
-      <source
-        src="https://github.com/Baque2005/Organizador/raw/refs/heads/master/Floricienta%20-%20Flores%20Amarillas%20(Official%20Video).mp3"
-        type="audio/mpeg">
+      <source src="flores-amarillas.mp3" type="audio/mpeg">
       Tu navegador no soporta audio HTML5.
     </audio>
   </div>
 
   <script>
     document.body.classList.remove('not-loaded');
+    const music = document.querySelector('audio');
+    const startMusic = function () {
+      music.play().catch(function () { });
+    };
+    startMusic();
+    document.addEventListener('pointerdown', startMusic, { once: true });
     const visibleMessage = document.querySelector('.special-text');
     document.body.appendChild(visibleMessage);
     Object.assign(visibleMessage.style, {
