@@ -1,5 +1,6 @@
-FROM nginx:alpine
+FROM python:3.12-alpine
 
-COPY ["index.html", "/usr/share/nginx/html/index.html"]
+WORKDIR /site
+COPY index.html .
 
-EXPOSE 80
+CMD ["sh", "-c", "python3 -m http.server ${PORT:-8080} --bind 0.0.0.0"]
